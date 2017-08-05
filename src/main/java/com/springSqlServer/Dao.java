@@ -22,4 +22,12 @@ public class Dao {
         sqlServerTemplate.update(sql,params,types);
     }
 
+
+    public void insertPic(byte[] picBytes){
+        String sql = "insert into pic(id,picInfo) values(?,?)";
+        Object[] params = new Object[]{"1",picBytes};
+        int[] types = new int[]{Types.INTEGER,Types.VARBINARY};
+        sqlServerTemplate.update(sql,params,types);
+    }
+
 }

@@ -11,6 +11,6 @@ public class Main {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("application-context.xml");
         Dao dao = (Dao)applicationContext.getBean("dao");
-        dao.insert();
+        dao.insertPic(FileUtil.image2byte("D:\\images\\test1.jpg"));
     }
 }
